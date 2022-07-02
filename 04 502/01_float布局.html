@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .clearfix:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .logo {
+            border: 1px solid red;
+            height: 40px;
+            width: 100px;
+            float: left;
+            margin-top: 5px;
+            margin-left: 10px;
+            /* 在ie上会变成20px,需要按照下面的写法操作 */
+            /* _margin-left: 5px; */
+            display: block;
+        }
+        
+        nav {
+            border: 1px solid green;
+            width: 200px;
+            height: 50px;
+            float: left;
+        }
+        
+        .user {
+            border: 1px solid blue;
+            height: 30px;
+            float: left;
+            max-width: 100px;
+        }
+        
+        header {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="clearfix">
+        <div class="logo">XDML</div>
+        <nav>导航</nav>
+        <div class="user">我的名字是</div>
+    </header>
+</body>
+
+</html>

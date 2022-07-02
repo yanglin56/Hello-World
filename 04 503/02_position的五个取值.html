@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 1px solid red;
+            height: 300px;
+            position: relative;
+            padding: 20px;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .clearfix:after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+        
+        .demo {
+            border: 1px solid green;
+            background: green;
+            width: 50px;
+            height: 50px;
+            /* position: static; */
+            position: relative;
+            /* float: left; */
+            z-index: 0;
+            top: 5px;
+        }
+        
+        .demo2 {
+            background: black;
+            width: 50px;
+            height: 50px;
+            /* float: left; */
+            position: relative;
+            z-index: -1;
+        }
+        
+        .close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0 8px;
+            background: blue;
+            color: white;
+        }
+        
+        button {
+            position: relative;
+        }
+        
+        button span {
+            position: absolute;
+            border: 1px solid red;
+            white-space: nowrap;
+            bottom: calc(100% + 10px);
+            left: 50%;
+            /* transform: translateX(-50%); */
+            /* 居中显示，这个需要自己算，上面的不需要 */
+            margin-left: -27px;
+        }
+        
+        button span {
+            display: none;
+        }
+        
+        button:hover span {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container clearfix">
+        <div class="demo"></div>
+        <div class="demo2"></div>
+        <div style="height: 100px;"></div>
+        <span class="close">x</span>
+        <button>点击
+            <span class="tips">提示内容</span>
+        </button>
+    </div>
+</body>
+
+</html>
