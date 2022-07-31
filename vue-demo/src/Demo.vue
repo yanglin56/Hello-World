@@ -1,7 +1,7 @@
 <template>
 <div class="red">
     {{n}}
-    <button @click="app">+1</button>
+    <button @click="add">+1</button>
 </div>
 </template>
 <script>

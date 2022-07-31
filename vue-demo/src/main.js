@@ -3,6 +3,7 @@
 
     // Vue.config.productionTip = false
     import Demo from './Demo.vue'
+    console.log(Demo)
     new Vue({
         el: '#app',
         render(h) {
