@@ -34,7 +34,11 @@
     * 默认使用非完整版
  * 最佳实践：总是使用非完整版，然后配合vue-loader和vue文件
 ###  <span id="jump2">2. template 和 render 怎么用</span>
-* template（完整）版的使用方法:
+* template是vue创建实例时传入对象的一个选项
+* template内容是在完整版下可被编译器编译渲染的，但里面的内容会覆盖掉挂载节点
+* 如果节点内原本有内容，那么将会被清空和替换。所以如果是使用完整版vue，要么在public/index.html里写内容，要么就使用template选项，二者选其一
+
+* template的使用方法:
   
   ```
   new window.Vue({
@@ -52,7 +56,10 @@
      }
    })
   ```
-* render（非完整）版的使用方式:
+* render是在非完整版下实现渲染的方法
+* 它是将已经被编译器编译好的对象渲染对视图上
+* 它可以渲染经过import导入并经过vue-loader处理的组件，也可以直接写一些待渲染对象
+* render的使用方式:
   
   ```
   new window.Vue({
@@ -77,3 +84,4 @@
   ![](image/73101.jpg)
 * 开始吧
   ![](image/73102.png)
+* 还可以下载到本地，下载解压包即可
