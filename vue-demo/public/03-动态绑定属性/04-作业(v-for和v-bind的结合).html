@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .movies {
+            color: red;
+        }
+    </style>
+</head>
+<!-- 作业要求：点击列表中的哪一项，那么该项的文字变为红色 -->
+
+<body>
+    <div id="app">
+        <ul>
+            <!-- 要求第一条为红色，之后点击谁谁变成红色 -->
+            <li v-for="m in movies">{{m}}</li>
+            <li v-for="(m,index) in movies" v-bind:class="[movies:isActive]">{{index}}-{{m}}</li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.min.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                movies: ['海贼王', '海尔兄弟', '海上钢琴师', '海的女儿', '海王']
+            },
+            methods: {
+                movies: function() {
+                    this.isActive = !this.isActive
+                },
+            },
+        })
+    </script>
+</body>
+
+</html>
