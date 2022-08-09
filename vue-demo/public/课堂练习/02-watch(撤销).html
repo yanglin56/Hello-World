@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        {{n}}
+        <hr/>
+        <button @click="add1">+1</button>
+        <button @click="add2">+2</button>
+        <button @click="minus1">-1</button>
+        <button @click="minus2">-2</button>
+        <hr/>
+        <button @click="undo">撤销</button>
+        <hr/>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.min.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                n: 0,
+                history: [],
+                inUndoMode: false
+            },
+            watch: {
+                n: function(newValue, oldValue) {
+                    console.log(this.inUndoMode);
+                    if (!this.inUndoMode) {
+                        this.history.push({
+                            from: oldValue
+                        })
+                    }
+                }
+            },
+            methods: {
+                add1() {
+                    this.n += 1;
+                },
+                add2() {
+                    this.n += 2;
+                },
+                minus1() {
+                    this.n -= 1;
+                },
+                minus2() {
+                    this.n -= 2;
+                },
+                undo() {
+                    const last = this.history.pop();
+                    this.inUndoMode = true;
+                    console.log('ha' + this.inUndoMode);
+                    this.n = old; // watch n 的函数会异步调用
+                    this.$nextTick(() => {
+                        this.inUndoMode = false;
+                    })
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>
