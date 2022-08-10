@@ -12,7 +12,7 @@
 * vue的prop是单向下行绑定：父级的prop的更新会向下流动到子组件中，但是反过来不行。可是有些情况，我们需要对prop进行“双向绑定”。这个时候，就可以用.sync来解决。
   
   ```
-    <text-document :title.sync="doc.title"></text-document>
+  <text-document :title.sync="doc.title"></text-document>
 
   //当子组件需要更新 title 的值时，它需要显式地触发一个更新事件：
 
