@@ -3,7 +3,7 @@
 ## 今天的主要内容为 🚀
 
 1. [什么是.sync 修饰符](#jump1)
-2. [.sync应运实例](#jump2)
+2. [.sync应用实例](#jump2)
 
 ## 开始吧
 
@@ -20,7 +20,7 @@
   ```
 * 这样title的属性在子组件内部更新，父组件也能感知的到，实现了“双向绑定”。
 
-###  <span id="jump2">2. .sync应运实例</span>
+###  <span id="jump2">2. .sync应用实例</span>
 ``` 
   <div id="app" class="app">
         APP.vue 我现在有 {{total}}元
