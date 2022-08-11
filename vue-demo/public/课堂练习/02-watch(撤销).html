@@ -18,7 +18,7 @@
         <button @click="minus2">-2</button>
         <hr/>
         <button @click="undo">撤销</button>
-        <hr/>
+        <hr/> {{history}}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.min.js"></script>
     <script>
@@ -30,15 +30,23 @@
                 inUndoMode: false
             },
             watch: {
-                n: function(newValue, oldValue) {
-                    console.log(this.inUndoMode);
-                    if (!this.inUndoMode) {
-                        this.history.push({
-                            from: oldValue
-                        })
-                    }
+                n(newValue, oldValue) {
+                    this.history.push({
+                        from: oldValue,
+                        to: newValue
+                    })
                 }
             },
+            // watch: {
+            //     n: function(newValue, oldValue) {
+            //         console.log(this.inUndoMode);
+            //         if (!this.inUndoMode) {
+            //             this.history.push({
+            //                 from: oldValue
+            //             })
+            //         }
+            //     }
+            // },
             methods: {
                 add1() {
                     this.n += 1;
@@ -56,10 +64,11 @@
                     const last = this.history.pop();
                     this.inUndoMode = true;
                     console.log('ha' + this.inUndoMode);
+                    const old = last.from;
                     this.n = old; // watch n 的函数会异步调用
                     this.$nextTick(() => {
                         this.inUndoMode = false;
-                    })
+                    }, 0)
                 }
             },
         })

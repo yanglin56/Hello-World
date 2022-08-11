@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .app {
+            border: 3px solid red;
+            padding: 10px;
+        }
+        
+        .Child {
+            border: 3px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" class="app">
+        APP.vue 我现在有 {{total}}元
+        <hr>
+        <!-- <Child :money="total" v-on:update:money="total = $event"></Child> -->
+        <Child :money.sync="total"></Child>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.min.js"></script>
+    <script>
+        const Child = Vue.extend({
+            template: `
+               <div id="Child" class="Child">
+                  {{money}}
+                  <button @click="$emit('update:money',money-100)">
+                    <span>花钱</span>
+                  </button> 
+                </div>
+            `,
+
+            props: ["money"]
+
+        })
+
+        const app = new Vue({
+            el: '#app',
+            data: {
+                total: 100000,
+            },
+            components: {
+                Child: Child
+            }
+        })
+    </script>
+</body>
+
+</html>
