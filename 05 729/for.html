@@ -53,17 +53,20 @@
         // for (let i = 0; i < 10; i++) {
         //     console.log(i);
         // }
-        let sum = 0;
-        for (let i = 0; i < 10; i++) {
-            sum += i;
-            console.log(i);
-        }
-        console.log(sum);
+
+        // let sum = 0;
+        // for (let i = 0; i < 10; i++) {
+        //     sum += i;
+        //     console.log(i);
+        // }
+        // console.log(sum);
+
         // 100以内可以被4、5、6整除的数
-        for (let i = 0; i <= 100; i++) {
-            if (i % 4 === 0 || i % 5 === 0 || i % 6 === 0)
-                console.log(i);
-        }
+        // for (let i = 0; i <= 100; i++) {
+        //     if (i % 4 === 0 || i % 5 === 0 || i % 6 === 0)
+        //         console.log(i);
+        // }
+
         // 打印0-100的数
         // ()只能有一句，不能写比较
         // {}不能出现i++ i--
@@ -168,15 +171,166 @@
         //引用值
         //array object function RegExp
         //array 数组 每个，后面空一格
-        var arr = [1, 2, 3, 4, 5, 6, 7, undefined, null];
+        // var arr = [1, 2, 3, 4, 5, 6, 7, undefined, null];
         // console.log(arr[0]);
         // arr[3] = null;
         // console.log(arr);
-        console.log(arr.length);
-        for (let i = 0; i < arr.length; i++) {
-            arr[i] += 2;
+        // console.log(arr.length);
+        // for (let i = 0; i < arr.length; i++) {
+        //     arr[i] += 2;
+        // }
+        // console.log(arr);
+
+        // // object 对象
+        // var person ={
+        //     name:'小夏',
+        //     //属性名/键名：属性值/键值
+        //     age:18,
+        //     height:180,
+        //     weight:140,
+        //     job:'WEB开发工程师'
+        // }
+        // person.name = '小白'
+        // console.log(person);
+        
+        // number string boolean object
+        // object = 引用类型 object/array
+        // Object代表引用类型，o具体对象
+        // console.log(typeof(null));
+        // console.log(typeof(undefined));
+        // console.log(typeof(function(){}));
+        // console.log(typeof(1-"1"));
+        // console.log(typeof("1"-"1"));
+
+        // 面试题
+        // console.log(a);
+        // console.log(typeof(a));
+        // console.log(typeof(typeof(a)));
+        // console.log(typeof(typeof(123)));
+
+        // 显示类型转换/隐式类型转换
+        // 显示类型转换
+        // let a = '123';   //Number-123
+        // let a = 'true';  //Number-NaN
+        // let a = true;  //1
+        // let a = false;  //0
+        // let a = null;  //0
+        // let a = undefined;  //NaN
+        // let a= 'a' ;   //NaN
+        // let a = '1a';    //NaN
+        // let a = '3.14';  //3.14
+        // console.log(typeof(Number(a))+'-'+Number(a));
+
+        // var a = '123';    //123
+        // var a = true;     //NaN
+        // var a = false;    //NaN
+        // var a = null;     //NaN
+        // let a = undefined;  //NaN
+        // let a = NaN;  //NaN
+        // var a = '3.14';       //3 小数点被去除了
+        // console.log(typeof(parseInt(a))+'-'+parseInt(a));
+        // var a = '10'; //a
+        // var a = 'b';  // 11
+        // 0123456789abcdef
+        // console.log(parseInt(a,16));  // 2-36
+
+        // console.log(parseInt('abc123'));  //NaN
+        // console.log(parseInt('123abc')); //123
+        // console.log(parseInt('1abc23')); //1
+
+        // console.log(parseFloat('3.14'));     //3.14
+        // console.log(parseFloat('3.1415926'));     //3.1415926
+        // var num=parseFloat('3.1415926');
+        // console.log(num.toFixed(2));     //3.14 四舍五入
+
+        // console.log(typeof(String('123')));
+        // console.log(typeof(123+''));
+        // var str = '3.14';     //undefined null会报错，没有toString的方法
+        // console.log(str.toString());
+        // var str = '100';
+        //toString(radix)
+        // console.log(parseInt(100,2).toString(16))
+
+        // console.log(Boolean(1));
+        // undefined null NaN "" 0 false
+        // 其他都是true
+
+        // var a = '1234';
+        // console.log(a.length);
+        // console.log(String(a).length);
+
+        //\
+        //隐式类型转换
+        // var a = '123';   //Number(a) 124
+        // a++;
+
+        // var a = 'a' + 1;  //String(1)  a1
+        // var a = '3' * 2;  // * / - % str -> number  6
+        // var a = '1' > 2;  //false
+        // var a = 1 > '2';    // number 
+        // var a = 'a' > 'b';  //ascii  false
+        // > < >= <=
+        // var a = 1 =='1';   //true
+        // var a = 1 != '2';     //true
+        // var a = 1 === '1';   //这个不进行隐式转换   false
+        // var a = NaN == NaN;
+        // console.log(a);
+
+        // var a1 = 2 > 1 > 3;   //false
+        // var a2 = 2 > 1 == 1;  //true
+        // console.log(a1,a2);
+        // undefined null 既不大于0也不小于0 
+        // var a1 = undefined < 0;
+        // var a2 = null < 0;
+        // var a3 = undefined == null;
+        // console.log(a1,a2,a3);
+
+        // var num = '123';
+        // var num = 'abc';
+        // console.log(typeof(- num) + ':' + - num);
+        // console.log(typeof(+ num) + ':' + + num);
+
+        // isNaN() 判断非数
+        // console.log(isNaN(NaN));
+        // console.log(isNaN(123));
+        // console.log(isNaN('123'));
+        // console.log(isNaN('a'));
+        // console.log(isNaN(null));      //0
+        // console.log(isNaN(undefined)); //NaN
+
+        //Number(值)-> NaN -> bool;
+
+        // 斐波那契数列 黄金分隔数列 兔子数列
+        // 1 1 2 3 5 8
+        // for 算出第n位
+        // var n = parseInt(window.prompt('N=?'));
+
+        // n1 n2 n3
+        // 1  1  2  3  5  8
+        //    n1 n2 n3
+        //       n1 n2 n3
+        //          n1 n2  n3
+
+       var n = parseInt(window.prompt('请输入第几位'));
+       if(n<=0){
+        console.log('输入错误')
+       }else{
+        var n1 = 1,
+           n2 = 2,
+           n3;
+        if(n<=2){
+            console.log(1);
+        }else{
+            for(var i=2;i<n;i++){
+            n3 = n1 + n2;
+            n1 = n2;
+            n2 = n3;
         }
-        console.log(arr);
+        console.log(n3);
+        }
+       } 
+     
+       
     </script>
 </body>
 
