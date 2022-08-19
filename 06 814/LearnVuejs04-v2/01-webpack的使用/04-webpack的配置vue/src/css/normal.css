@@ -1,0 +1,4 @@
+body {
+  /* background-color: red; */
+  background: url(/01-webpack的使用/03-webpack的loader/src/img/02.jpeg);
+}
