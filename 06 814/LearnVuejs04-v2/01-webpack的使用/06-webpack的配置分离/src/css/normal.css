@@ -1,0 +1,4 @@
+body {
+  /* background-color: red; */
+  background: url(/01-webpack的使用/06-webpack的配置分离/src/img/02.jpeg);
+}
