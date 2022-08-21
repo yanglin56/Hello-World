@@ -1,21 +1,37 @@
-import React from 'react'
-const App = ()=>{
-  return (
-    <div>App组件
-      <Component numbers={[1,2,3]}/>
-    </div>
-  )
-}
+import { toHaveStyle } from '@testing-library/jest-dom/dist/matchers';
+import React from 'react';
 
-const Component =(props)=>{
-  const array=[]
-  for(let i=0;i<props.numbers.length;i++){
-    array.push(<div>{i}:
-{props.numbers[i]}
-    </div>)
+class App extends React.PureComponent {
+  divRef = undefined;
+  constructor(props){
+    super(props)
+    this.state = {
+      n: 1,
+      width:undefined
+    };
+    this.divRef = React.createRef()
   }
-  return <div>{ array }</div>
+  onClick= ()=>{
+    this.setState(state=> ({
+      n:state.n + 1
+    }));
+    // {n:1} 和 {n:1}
+  };
+  componentDidMount(){
+    // const div = document.getElementById('xxx')
+    // const {width}=div.getBoundingClientRect()
+    // this.setState({width})
+    const div = this.divRef.current
+    console.log(div)
+    const {width} = div.getBoundingClientRect()
+    this.setState({width})
+  }
+  render(){
+    return (
+      // <div id="xxx">hello World,{this.state.width}</div>
+      <div ref={this.divRef}>hello World,{this.state.width}</div>
+    )
+  }
 }
 
-
-export default App
+export default App;
