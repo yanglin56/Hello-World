@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+
+    //初始化参数 默认值:undefined
+    // function test(a = 1,b){
+    //   console.log(a);
+    //   console.log(b);
+    // }
+    // test( undefined,2);
+
+    // function test(a = undefined,b){
+    //   console.log(a);
+    //   console.log(b);
+    // }
+    // test(1,2);
+
+    // function test(a,b){
+    //   // var a = arguments[0] || 1;
+    //   // var b = arguments[1] || 2;
+    //   var a,b;
+    //   if(typeof(arguments[0])!== 'undefined'){
+    //     a = arguments[0];
+    //   }else{
+    //     a = 1;
+    //   }
+    //   if(typeof(arguments[1])!== 'undefined'){
+    //     b = arguments[1];
+    //   }else{
+    //     b = 2;
+    //   }
+
+    //   console.log(a+b);
+    // }
+    // test();
+
+   function test(a,b){
+    var a = typeof(arguments[0]) !== 'undefined' ? arguments[0] : 1;
+    var b = typeof(arguments[1]) !== 'undefined' ? arguments[1] : 2;
+
+    console.log(a+b);
+   }
+    
+    test();
+
+  </script>
+</body>
+</html>

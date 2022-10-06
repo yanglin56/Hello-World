@@ -12,18 +12,222 @@
 
     <script>
         //日程安排
-        var weekday=window.prompt('请输入星期几');
-        var time =window.prompt('请输入上午或者下午');
-        switch(weekday){
-            case '星期一':
-                if(time==='上午'){
-                    console.log('看书');
-                }else if(time==='下午'){
-                    console.log('逛街');
-                }
-                break;
-        }
-    </script>
+        // var weekday=window.prompt('请输入星期几');
+        // var time =window.prompt('请输入上午或者下午');
+        // switch(weekday){
+        //     case '星期一':
+        //         if(time==='上午'){
+        //             console.log('看书');
+        //         }else if(time==='下午'){
+        //             console.log('逛街');
+        //         }
+        //         break; 
+        // }
+
+        // x,y 任意x 确定的y x自变量 y-> x函数
+        // y=f(X) 函数值就是确定的 有确定性
+        //
+        //函数编程
+
+        // if(3 > 0){
+        //     test()
+        // }
+
+        // if(2 > 0){
+        //     test()
+        // }
+
+        // if(1 > 0){
+        //     test()
+        // }
+
+       
+        //耦合
+        //高内聚，低耦合 -> 模块的单一责任制
+        //解耦合
+        // function test(){
+        //     for(var i=0;i<10;i++){
+        //         console.log(i)
+        //     }
+        // }
+
+        // test();
+        // function test(){
+        //     console.log('我是很牛的函数');
+        // }
+
+        // 函数名的命名规则
+        // 不能数字开头
+        // 字母 _ $
+        // 包含数字
+        // 小驼峰命名法 复合单词命名法myWonderfulTest
+        // my_wonderful_test
+        //最基本的函数写法 - 函数声明
+        // function test(参数) {
+        //     函数的执行语句
+        // }
+
+        //函数声明
+        // function test(){
+        //     var a = 1,
+        //         b = 2;
+        //     console.log(a,b);
+        // }
+        // test();
+
+        //表达式  字面量
+        // var test = function test1(){ //-> 匿名函数
+        //     var a = 1,
+        //         b = 2;
+        //     console.log(a,b);
+        //     // test1();  在内部会无限循环，递归 不要调用test1 在外面调用会报错,不可见
+        // }
+        // console.log(test.name)
+        // test();
+        // test1(); 
+
+        // function 函数名 参数(可选) 返回值(可以没有) return(必须有，没有会自动加)
+        // var aa = Number(window.prompt('a'));
+        // var bb = Number(window.prompt('b'));
+        //              //占位 -> 形式上占位，形式参数
+        // function test(a,b){
+
+        //     console.log(a - b);
+        // }
+        //      //实际参数 实参
+        // test(aa,bb);
+
+        // function test(a,b,c){
+        //     console.log(a,b,c)
+        // }
+        // test(1,2);
+
+        // function test(a,b){
+        //     console.log(a,b)
+        // }
+        // test(1,2,3);
+        // arguments 参数
+        // function test(a,b){
+        //     // for(var i = 0;i<arguments.length;i++){
+        //     //     console.log(arguments[i]);
+        //     // }
+        //     // console.log(arguments.length);
+        //     // console.log(test.arguments)
+        //     console.log(arguments[1]);
+        // }
+        // test(1,2,3);
+        //形参和实参数量可不等
+
+        //一个函数被调用时，累加他的实参值
+        // function sum(){ 
+        //     var a = 0;
+        //     for( var i = 0;i<arguments.length;i++){
+        //         a+=arguments[i]
+        //     }
+        //     console.log(a);
+        // }
+        // sum(1,2,3,4,5);
+        // function test(a,b){
+        //     a=3;
+        //     console.log(arguments[0])
+        // }
+        // test(1,2)
+
+        // function test(a,b){
+        //     b = 3;
+        //     console.log(arguments[1])
+        // }
+        
+        // test(1);
+
+        // function test(){
+        //     console.log('我正在执行');
+        //     return;
+        //     console.log('我执行完了就结束这个函数');
+        // }
+
+    //     function test(name){
+    //         // if(!name){
+    //         //     return '您没有填写姓名！';
+    //         // }
+    //         // return name;
+    //         return name || '您没有填写姓名！';
+    //     }
+    //     //undefined null NaN "" 0 false
+    //    console.log( test('艾小野'));
+    //    console.log( test());
+
+        //  var b = 2;
+        //  function test(){
+        //     var a = 1;
+        //     console.log(b);
+        //  }
+        //  test();
+        
+        //全局变量 [[scope]]
+        // a = 1;
+        // function test1(){
+        //     //局部变量
+        //     var b = 2;
+        //     // console.log(a,b);
+        //     a = 4;
+
+        //     function test2(){
+        //         //局部变量
+        //         var c =3;
+        //         // console.log(a,b,c);
+        //         b = 5;
+        //         console.log(b)
+        //     }
+        //     test2();
+        //     // console.log(c)   //报错
+        // }
+        // // console.log(b,c);
+        // // console.log(a);
+
+        // test1();
+        // // console.log(a);
+
+        // function test1(){
+        //     var a = 1;
+        //     console.log(b);
+        // }
+        // function test2(){
+        //     var b = 2;
+        //     console.log(a);
+        // } 
+        // test1();
+        // test2();
+
+        // 一个固定的功能或者是程序段被封装的过程，
+        // 实现一个固定的功能或者是程序，
+        // 在这个封装体中需要一个入口和一个出口，
+        // 入口就是参数，出口就是返回
+
+        // function test(str1,str2,str3){
+        //     console.log(str1);
+        //     console.log(str2);
+        //     console.log(str3);
+        // }
+
+        // test(
+        //     '我爱编程',
+        //     '我特爱编程',
+        //     '我是编程达人',
+        // );
+ 
+        // function test(str){
+        //         return str;
+        // }
+        // console.log(test('我爱编程'));
+
+        // 1.定义一个函数，从wp接收一个饮料的名称，函数返回对应的价格
+        // 2.定义一个函数，从wp接收第一个数，接收一个运算符（+ - * / %），接收第二个数，利用这个函数做运算，
+        // 并返回运算结果
+        // 3.定义一个函数，从wp接收一个n，算出n的阶乘，不能用for循环
+        // 4.定义一个函数，从wp接收一个n,算出斐波那契数列的第n位，不能用for循环
+
+   </script>
 </body>
 
 </html>
