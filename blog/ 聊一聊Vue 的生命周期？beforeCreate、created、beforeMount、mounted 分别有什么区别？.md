@@ -31,7 +31,7 @@
 * destroyed（销毁后）
   * 对应的钩子函数是destroyed。在销毁后，会触发destroyed钩子函数。
 
-vue的生命周期的思想贯穿在组件开发的始终，通过熟悉其生命周期调用不同的钩子函数，我们可以准确地控制数据流和其对DOM的影响;vue生命周期的思想是Vnode和MVVM的生动体现和继承。
+vue的生命周期的思想贯穿在组件开发的始终，通过熟悉其生命周期调用不同的钩子函数，我们可以准确地控制数据流和其对DOM的影响;vue生命周期的思想是 Vnode 和 MVVM 的生动体现和继承。
 
 ###  <span id="jump3">3.区别</span>
 * beforeCreate：el 和 data 并未初始化均为undefined
