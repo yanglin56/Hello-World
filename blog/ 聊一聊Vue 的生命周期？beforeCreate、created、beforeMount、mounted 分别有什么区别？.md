@@ -6,9 +6,8 @@
 
 1. [Vue 的生命周期是什么](#jump1)
 2. [vue 生命周期的八个阶段](#jump2)
-3. [jQuery 如何创建元素](#jump3)
-4. [jQuery 如何移动元素](#jump4)
-5. [jQuery 如何修改元素的属性](#jump5)
+3. [区别](#jump3)
+
 
 ## 开始吧
 
@@ -32,5 +31,10 @@
 * destroyed（销毁后）
   * 对应的钩子函数是destroyed。在销毁后，会触发destroyed钩子函数。
 
-vue的生命周期的思想贯穿在组件开发的始终，通过熟悉其生命周期调用不同的钩子函数，我们可以准确地控制数据流和其对DOM的影响;
-vue生命周期的思想是Vnode和MVVM的生动体现和继承。
+vue的生命周期的思想贯穿在组件开发的始终，通过熟悉其生命周期调用不同的钩子函数，我们可以准确地控制数据流和其对DOM的影响;vue生命周期的思想是Vnode和MVVM的生动体现和继承。
+
+###  <span id="jump3">3.区别</span>
+* beforeCreate：el 和 data 并未初始化均为undefined
+* created:完成了 data 数据的初始化，el没有初始化
+* beforeMount：完成了el初始化,但data并没有挂载完成
+* mounted ：完成了挂载
