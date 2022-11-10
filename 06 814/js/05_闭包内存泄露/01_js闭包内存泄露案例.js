@@ -12,9 +12,16 @@ function createFnArray() {
 
 var arrayFns = []
 for (var i = 0; i < 100; i++) {
-  arrayFns.push(createFnArray())
+  setTimeout(() => {
+    arrayFns.push(createFnArray())
+  }, i * 100)
 }
 
+// arrayFns = null
 setTimeout(() => {
-  arrayFns = null
-}, 2000)
+  for (var i = 0; i < 50; i++) {
+    setTimeout(() => {
+      arrayFns.pop()
+    }, 100 * i)
+  }
+}, 10000)
