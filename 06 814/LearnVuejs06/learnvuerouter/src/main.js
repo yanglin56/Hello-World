@@ -12,4 +12,9 @@ new Vue({
   render: h => h(App)
 })
 
-console.log(router);
+// console.log(router);
+
+// const obj = {
+//   name: 'why'
+// }
+// Object.defineProperty(obj, 'age', 18);

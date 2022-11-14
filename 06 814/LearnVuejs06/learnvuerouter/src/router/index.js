@@ -7,6 +7,7 @@ import Vue from 'vue'
 // import About from '../components/About'
 // import User from '../components/User'
 
+//路由懒加载
 const Home = () => import('../components/Home')
 const HomeNews = () => import('../components/HomeNews')
 const HomeMessage = () => import('../components/HomeMessage')
@@ -31,13 +32,17 @@ const routers = [
       title: '首页'
     },
     children: [
+      // {
+      //   path: '',
+      //   redirect: 'news'
+      // },
       {
         path: 'news',
         component: HomeNews
       },
       {
         path: 'message',
-        component: HomeMessage 
+        component: HomeMessage
       }
     ]
   },
@@ -78,15 +83,16 @@ const router = new VueRouter({
 
 // })
 // 前置守卫(guard)
-router.beforeEach((to, from, next)=>{
+router.beforeEach((to, from, next) => {
   // 从from到to
   document.title = to.matched[0].meta.title
-  console.log(to)
+  console.log(to);
+  console.log('+++++');
   next()
 })
 
 // 后置钩子(hook)
-router.afterEach((to, from)=>{
+router.afterEach((to, from) => {
   console.log('-----');
 })
 
