@@ -29,6 +29,4 @@ var obj = {
   }
 }
 
-
-
 obj.getData()
