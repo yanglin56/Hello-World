@@ -5,10 +5,16 @@ Function.prototype.hybind = function (thisArg, ...argArray) {
   // 2.绑定this
   thisArg = (thisArg !== null && thisArg !== undefined) ? Object(thisArg) : window
 
-  function proxyFn() {
+  function proxyFn(...args) {
+    // 3.将函数放到thisArg中进行调用
     thisArg.fn = fn
+    // 特殊：对两个传入的参数进行合并
+    var finalArgs = [...argArray, ...args]
+    var result = thisArg.fn(...finalArgs)
     var result = thisArg.fn
     delete thisArg.fn
+
+    // 4.返回结果
     return result
   }
 
@@ -38,6 +44,9 @@ function sum(num1, num2, num3, num4) {
 // newSum(30, 40)
 
 // 使用自己定义的bind
-var bar = foo.hybind("abc")
-var result = bar()
-console.log(result)
+// var bar = foo.hybind("abc")
+// var result = bar()
+// console.log(result)
+
+var newSum = sum.hybind("abc", 10, 20)
+var result = newSum(30, 40)
