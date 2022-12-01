@@ -45,3 +45,7 @@ function HelloWorld(props) {
   props.info.name = "why"
 }
 
+// function setCache(key, info) {
+//   localStorage.setItem(key, info)
+// }
+
