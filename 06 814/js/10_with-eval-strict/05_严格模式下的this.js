@@ -18,6 +18,7 @@ var bar = obj.foo
 bar()
 
 // setTimeout的this
+// fn.apply(this = window)
 setTimeout(function () {
   console.log(this)
 }, 1000)
