@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 后代选择器 */
+      .home span {
+        color: red;
+        font-size: 30px;
+      }
+      /* home的子代元素设置一个背景颜色 */
+      .home > span {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="home">
+      <span>啦啦啦</span>
+      <div class="box">
+        <p>我是p元素</p>
+        <span class="home-item">呵呵呵呵</span>
+      </div>
+
+      <div class="content">
+        <div class="desc">
+          <p>
+            <span class="home-item">哈哈哈哈</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
