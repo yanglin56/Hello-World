@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/reset.css" />
+    <!--
+      1. 先完成结构
+      2. 重置样式（body/a/ul）
+      3. 先整体，后局部
+        * 最好按照结构的顺序
+        * 顺序：按照从外往里，从上往下
+      4. 去除重复的代码（css）  
+        * 将重复的逻辑放到一个单独的class中（.icon）
+        * 不同的代码抽到不同的class（.new .hot）
+    -->
+    <style>
+      ul > li {
+        margin-top: 30px;
+      }
+      ul > li > a {
+        display: inline-block;
+      }
+      /* 局部 */
+      ul > li .ranking {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-right: 3px;
+        text-align: center;
+        line-height: 24px;
+
+        font-weight: 700;
+        color: #999;
+      }
+      /* 伪类：结构伪类 */
+      ul > li:nth-child(1) .ranking {
+        color: #f00;
+      }
+      ul > li:nth-child(2) .ranking {
+        color: #080;
+      }
+      ul > li:nth-child(3) .ranking {
+        color: #ffa500;
+      }
+      /* 内容相关 */
+      ul > li .content {
+        display: inline;
+      }
+      /* 图标相关 */
+      ul > li .icon {
+        display: inline-block;
+        top: -1px;
+        left: 3px;
+        width: 16px;
+        height: 16px;
+        background-image: url(/images/hot.svg);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="#">
+          <span class="ranking one">1</span>
+          <div class="content">
+            一花一世界，明媚春天。杜鹃花开满枝头，色彩艳丽。繁花实景
+          </div>
+          <i class="icon"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="ranking two">2</span>
+          <div class="content">
+            一花一世界，明媚春天。杜鹃花开满枝头，色彩艳丽。繁花实景
+          </div>
+          <i class="icon"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="ranking three">3</span>
+          <div class="content">
+            一花一世界，明媚春天。杜鹃花开满枝头，色彩艳丽。繁花实景
+          </div>
+          <i class="icon"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="ranking">5</span>
+          <div class="content">
+            一花一世界，明媚春天。杜鹃花开满枝头，色彩艳丽。繁花实景
+          </div>
+          <i class="icon"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="ranking">6</span>
+          <div class="content">
+            一花一世界，明媚春天。杜鹃花开满枝头，色彩艳丽。繁花实景
+          </div>
+          <i class="icon"></i>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>
