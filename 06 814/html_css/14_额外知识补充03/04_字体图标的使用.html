@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: 'iconfont';
+        /* 没下载icon图标，随便试试 */
+        src: url('./fonts03/AaJianHaoTi.ttf');
+      }
+
+      .iconfont {
+        font-family: 'iconfont';
+        font-style: normal;
+      }
+      .music::before {
+        content: '我';
+      }
+      .icon {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <i class="iconfont">&#xe654;</i>
+    <i class="iconfont">&#xe664;</i>
+
+    <i class="icon"></i>
+
+    <!-- 不使用字符实体店方式展示出来 -->
+    <i class="iconfont music"></i>
+  </body>
+</html>

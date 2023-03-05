@@ -6,8 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .box > div:first-child {
+      .box > :first-child {
         color: red;
+      }
+      .box > :only-child {
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .box > :only-of-type {
+        color: purple;
+      }
+      /* html元素 */
+      :root {
+        font-size: 30px;
+      }
+      :empty {
+        width: 100px;
+        height: 100px;
+        background-color: #f00;
       }
     </style>
   </head>
@@ -20,5 +36,17 @@
       <div>列表内容4</div>
       <div>列表内容5</div>
     </div>
+
+    <div class="box">
+      <div>我是box的div</div>
+      <span>我是span元素</span>
+    </div>
+
+    <div class="box">
+      <div>我是box的div</div>
+      <div>我是box的div</div>
+    </div>
+
+    <div class="container"></div>
   </body>
 </html>
