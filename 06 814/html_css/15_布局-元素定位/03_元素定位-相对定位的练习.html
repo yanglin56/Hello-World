@@ -6,16 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .box {
-        display: inline-block;
-        position: static; /*默认值*/
+      div {
+        font-size: 20px;
+      }
+
+      span {
+        font-size: 12px;
+        position: relative;
+        bottom: 8px;
       }
     </style>
   </head>
   <body>
-    <div>div</div>
-    <span>span</span>
-    <img src="/images/jd_sprite_01.png" alt="" />
-    <div class="box">div</div>
+    <div>
+      <p>3的二次方+2的三次方=数值</p>
+      3<span>2</span> + 2<span>3</span> = 17
+    </div>
   </body>
 </html>
