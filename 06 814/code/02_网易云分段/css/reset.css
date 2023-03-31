@@ -1,4 +1,4 @@
-body, h1, h2, h3, ul, li, p {
+body, h1, h2, h3, ul, ol, li, p, dl, dt, dd {
   margin: 0;
   padding: 0;
 }
@@ -9,7 +9,7 @@ a {
   outline: none;
 }
 
-ul, li {
+ul, ol, li {
   list-style: none;
 }
 
@@ -20,4 +20,8 @@ input {
 
 img {
   vertical-align: top;
+}
+
+i {
+  font-style: normal;
 }

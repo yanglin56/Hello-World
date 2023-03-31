@@ -1,0 +1,141 @@
+.footer {
+  position: relative;
+  height: 325px;
+  overflow: hidden;
+  border-top: 1px solid #d3d3d3;
+  background: #f2f2f2;
+}
+.footer .footer-content .list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 33px;
+}
+
+.footer .footer-content .list .item {
+  width: 45px;
+  margin-left: 80px;
+  text-align: center;
+  color: #666;
+}
+.footer .footer-content .list .item:first-child {
+  margin-left: 0;
+}
+.footer .footer-content .list .logo {
+  display: block;
+  float: none;
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+}
+.f-tid {
+  text-indent: -9999px;
+}
+.footer .footer-content .list .logo.logonew {
+background: url(../images/foot_sprite.png) no-repeat ;
+background-size: 220px 220px;
+}
+.footer .footer-content .list .logo.logo-openplatform {
+  background-position:  -170px -5px;
+}
+.footer .footer-content .list .logo.logo-openplatform:hover{
+  background-position: -5px -115px;
+}
+.footer .footer-content .list .logo.logo-trade {
+  background-position: -5px -170px;
+}
+.footer .footer-content .list .logo.logo-trade:hover {
+  background-position: -60px -170px;
+}
+.footer .footer-content .list .logo.logo-amped {
+  background-position: -5px -60px;
+}
+.footer .footer-content .list .logo.logo-amped:hover {
+  background-position: -60px -5px;
+}
+.footer .footer-content .list .logo.logo-auth {
+background-position: -60px -60px;
+}
+.footer .footer-content .list .logo.logo-auth:hover {
+  background-position: -115px -5px;
+  }
+.footer .footer-content .list .logo.logo-musician {
+  background-position: -115px -115px;
+}
+.footer .footer-content .list .logo.logo-musician:hover {
+  background-position: -5px -5px;
+}
+.footer .footer-content .list .logo.logo-reward {
+  background-position: -170px -115px;
+}
+.footer .footer-content .list .logo.logo-reward:hover {
+  background-position: -60px -115px;
+}
+.footer .footer-content .list .logo.logo-cash {
+  background-position: -170px -60px;
+}
+.footer .footer-content .list .logo.logo-cash:hover {
+  background-position: -115px -60px;
+}
+.footer .footer-content .list .item span {
+  display: inline-block;
+  width: 100px;
+  margin-top: 10px;
+  margin-left: -27.5px;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  color: rgba(0,0,0, 0.5);
+}
+.footer .footer-content .area-bottom {
+  padding-top: 60px;
+  line-height: 24px;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer .footer-content .area-bottom .link .item,
+.footer .footer-content .area-bottom .s-fc3 {
+  color:#666;
+}
+.footer .footer-content .area-bottom a:hover {
+  text-decoration: underline;
+}
+.footer .footer-content .area-bottom .link .line {
+  margin: 0 8px 0 8px;
+  color: #D9D9D9;
+}
+.footer .footer-content .area-bottom .sep {
+  margin-right: 14px;
+}
+.footer .footer-content .area-bottom .police-link {
+  margin-left: 5px;
+  font-size: 0;
+}
+.footer .footer-content .area-bottom .police-logo {
+  width: 14px;
+  height: 14px;
+  background: url(../images/police.png) no-repeat;
+  background-size: cover;
+  display: inline-block;
+  margin-right: 2px;
+  vertical-align: -2px;
+}
+.footer .footer-content .area-bottom .police-text {
+  font-size: 12px;
+}
+/* 回到顶部 */
+.m-back {
+  display: block;
+  position: fixed;
+  text-indent: -9999px;
+  left: 50%;
+  margin-left: 500px;
+  bottom: 160px;
+  width: 49px;
+  height: 44px;
+  background: url(../images/sprite.png) no-repeat 0 9999px;
+  background-position: -265px -47px;
+}
+.m-back:hover {
+  background-position: -325px -47px;
+}
